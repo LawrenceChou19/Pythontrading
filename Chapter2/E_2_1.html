@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Input basic data and personal investigate experience</p>
+    <form action="personaldata.py" method="post">
+    <fieldset>
+    <legend>Personal information : </legend>
+    Name :<input type="text" name="name"><br>
+    Account :<input type="text" name="id"><br>
+    Password(At least 8 characters, A combination of uppercase letters, lowercase letters, numbers) : <input type="password" name="pwd">
+    Encrypt : <input type="text" id="encryptedPwd" name="encryptedPwd" readonly><br>
+    <!--Encrypt : <keygen name="security"><br>-->
+    Gender : <input type="radio" name="gender" value="male" checked>Male
+    <input type="radio" name="gender" value="female" checked>Female
+    <input type="radio" name="gender" value="gender_other" checked>Other
+    Education : <select>
+            <option value="phd">PHD</option>
+            <option value="master">Master</option>
+            <option value="bachelor">Bachelor</option>
+            <option value="senior">High School</option>
+            <option value="other">Other</option>
+    </select><br>
+    Birth(AD) : <input type="date" name="bday"><br>
+    E-mail : <input type="email" name="email"><br>
+    </fieldset>
+    <fieldset>
+    <legend>Investment Period</legend>
+    <input type="checkbox" name="inv_exper" value="house" checked>Real Estate
+    <input type="checkbox" name="inv_exper" value="stock" checked>Stock
+    <input type="checkbox" name="inv_exper" value="fund" checked>Fund
+    <input type="checkbox" name="inv_exper" value="warrant" checked>Warrant<br>
+    <input type="checkbox" name="inv_exper" value="futureoption" checked>Future Option
+    <input type="checkbox" name="inv_exper" value="bond" checked>Bond
+    <input type="checkbox" name="inv_exper" value="savings" checked>Fixed deposit<br>
+    <label for="writing_exper">Personal investment experience describe</label><br>
+    <textarea name="message" rows="10" cols="30"></textarea>
+    </fieldset><br>
+    <input type="Submit">
+    <button type="button" onclick="alert('Hello HTML5!')">Button submit !</button>
+    <input type="Reset">
+
+    </form>
+</body>
+</html>
