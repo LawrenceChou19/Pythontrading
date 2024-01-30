@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit card payment form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 20px 0;
+            width: 50%;
+            justify-content: space-between;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .inputA,
+        .inputB {
+            flex: 1;
+            margin-right: 5px; /* 設定 A 和 B 之間的間距 */
+        }
+
+        .inputC {
+            flex: 2; /* 設定 C 的寬度是 A 或 B 的兩倍 */
+            margin-right: 50px;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<H3>Payment bill</H3>
+<body>
+    <form>
+        <fieldset>
+            <table> 
+                <legend>Payment method</legend>
+                <div>Please select payment method : <br>
+                <select id="payment" name="payment">
+                    <option value="Visa">Visa</option>
+                    <option value="Master Card">Master Card</option>
+                    <option value="JCB">JCB</option>
+                </select><br><br>
+              
+                <tr>
+                    <td class="right">
+                        Card number :<br>
+                        <input type="text" id="cardnumber" name="cardnumber">
+                    
+                    </td>
+                    <td class="left">
+                        Expired date :<br>
+                        <select id="expiryMonth" name="expiryMonth"></select>
+                        <select id="expiryYear" name="expiryYear"></select>
+                    </td>
+                </tr>       
+            </table>
+            <h4>Bill information : </h4>  
+            <div class="container">
+                <div class="inputA">
+                    First Name 
+                    <input type="text" >
+                </div>
+                <div class="inputB">
+                    Last Name 
+                    <input type="text" >
+                </div>    
+                <div class="inputC">
+                    City<br>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="container">
+                <div class="inputC">
+                    Billing Address 
+                    <input type="text" >
+                </div>
+                <div class="inputC">
+                    Postal code
+                    <input type="text">
+                </div>
+            </div>
+            <div class="container">
+                <div class="inputA">
+                    <lebel>Nation</lebel>
+                    <select id="country" name="country">
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                    </select>
+                </div>
+                <div class="inputB">
+                </div>
+                <div class="inputC">
+                    Telephone number
+                    <input type="text">
+                </div>
+            </div>
+            <button type="button" onclick="alert('submit !')"> submit !</button>
+        </fieldset>
+    </form>
+
+
+    <script>
+        const currentYear = new Date().getFullYear();
+        const futureYears = 10; // 可以選擇未來幾年
+
+        const expiryMonthSelect = document.getElementById('expiryMonth');
+        const expiryYearSelect = document.getElementById('expiryYear');
+
+        // 生成月份選項
+        for (let month = 1; month <= 12; month++) {
+            const option = document.createElement('option');
+            option.value = month;
+            option.textContent = month < 10 ? '0' + month : month; // 如果是個位數，補0
+            expiryMonthSelect.appendChild(option);
+        }
+
+        // 生成年份選項
+        for (let year = currentYear; year <= currentYear + futureYears; year++) {
+            const option = document.createElement('option');
+            option.value = year;
+            option.textContent = year;
+            expiryYearSelect.appendChild(option);
+        }
+    </script>
+</body>
+</html>

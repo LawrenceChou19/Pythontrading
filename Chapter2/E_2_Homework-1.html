@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User registration</title>
+    <style>
+        .checkmark {
+            color: green;
+            font-size: 18px;
+            display: none;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend>User Registration</legend>
+            Username : <br><input type="text" name="username" placeholder="Username"><br>
+            <label>Usernames can contain any text or numbers, but no spaces! </label><br><br>
+            E-mail : <br><input type="text" name="E-mail" placeholder="E-mail"><br>
+            <label>Please provide your email address!</label><br><br>
+            
+            Password : <br><input type="password" id="password" name="password" minlength="4" required placeholder="Password">
+            <span class="error-message" id="passwordError">Password must be at least 4 characters long.</span><br>
+            <br><br>
+
+            Confirm Password : <br><input type="password" id="confirmPassword" confirmPassword" minlength="4" placeholder="Re-password">
+            <span class="checkmark" id="passwordMatch">&#10004;</span> <!-- 確認勾勾圖案 -->
+            <span class="error-message" id="confirmPasswordError">Passwords do not match.</span><br>
+            <label>Please re-enter your password!</label><br><br>
+
+            <button type="button" onclick="alert('Register')">Register!</button>
+        </fieldset>
+    </form>
+    <script>
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const passwordError = document.getElementById('passwordError')
+        const checkmark = document.getElementById('passwordMatch');
+        const confirmPasswordError = document.getElementById('confirmPasswordError');
+
+        passwordInput.addEventListener('input', () => {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+
+            // 檢查密碼長度
+            if (password.length < 4) {
+                passwordError.style.display = 'inline';
+            } else {
+                passwordError.style.display = 'none';
+            }
+
+            // 檢查密碼匹配
+            if (password === confirmPassword) {
+                checkmark.style.display = 'inline';
+                confirmPasswordError.style.display = 'none';
+            } else {
+                checkmark.style.display = 'none';
+                confirmPasswordError.style.display = 'inline';
+            }
+        });
+
+        confirmPasswordInput.addEventListener('input', () => {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+            
+            // 檢查密碼長度
+            if (password.length < 4) {
+                passwordError.style.display = 'inline';
+            } else {
+                passwordError.style.display = 'none';
+            }
+
+            // 檢查密碼匹配
+            if (password === confirmPassword) {
+                checkmark.style.display = 'inline';
+                confirmPasswordError.style.display = 'none';
+            } else {
+                checkmark.style.display = 'none';
+                confirmPasswordError.style.display = 'inline';
+            }
+        });
+    </script>
+ 
+</body>
+
+</html>
