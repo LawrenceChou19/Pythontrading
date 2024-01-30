@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Investigate experience</title>
 </head>
 <body>
     <p>Input basic data and personal investigate experience</p>
@@ -13,7 +13,13 @@
     Name :<input type="text" name="name"><br>
     Account :<input type="text" name="id"><br>
     Password(At least 8 characters, A combination of uppercase letters, lowercase letters, numbers) : <input type="password" name="pwd">
-    Encrypt : <input type="text" id="encryptedPwd" name="encryptedPwd" readonly><br>
+    Encrypt :<form>
+        <!--<label for="encryptionStrength">Select Encryption Strength:</label>-->
+        <select id="encryptionStrength" name="encryptionStrength">
+            <option value="RSA-155">RSA-155</option>
+            <option value="RSA-768">RSA-768</option>
+            <option value="RSA-2048"selected>RSA-2048</option>
+        </select></br>
     <!--Encrypt : <keygen name="security"><br>-->
     Gender : <input type="radio" name="gender" value="male" checked>Male
     <input type="radio" name="gender" value="female" checked>Female
