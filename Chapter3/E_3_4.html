@@ -7,15 +7,17 @@
 </head>
 <body>
     <script>
-        var x = "Hello";
+        var x = "Hello!";
         var y = "JavaScript";
         document.write("x = Hello; y = JavaScript"+ "</br>");
         document.write("x and y adding strings " + x + y +"</br>");
-        document.write("2000 + 300 + Lexus = ");
-        document.write(2000 + 300 + " Lexus" + "</br>");
-        document.write("x = 1; y = 0, x and y = " + (x & y) + "</br>");
-        document.write("x = 1; y = 0, x or y = " + (x|y) + "</br>");
-        document.write("x = 1; y = 0, x xor y = " + (x^y) + "</br>");
+        document.write("y string length = "+ y.length + "</br>");
+        document.write("The position where o appears in x string ="+ x.search("o") + "</br>");
+        document.write("x string Uppercase = " + x.toUpperCase() + "</br>");
+        document.write("x string Lowercase = " + x.toLowerCase() + "</br>");
+        document.write("Get the 5th character of x string = " +  x.charAt(5) + "</br>");
+        document.write("Get the 4th to 10th characters of the y string = " +  y.charAt(4,10) + "</br>");
+        document.write("Search out the ! of the x string and replace it with ~= " + x.replace("!","~") + "</br>");
     </script>
 </body>
 </html>
