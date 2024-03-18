@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_3_9</title>
+</head>
+<body>
+    <script>
+        var n="2";var m="2.1416";k=20;bin="10100";
+        document.write("n and m raw data type = "+typeof(n)+ " or " + typeof(m) + "</br>");
+        document.write(" n + m = " + ( n + m ) + "</br>");
+        n = parseInt(n); m = parseFloat(m);
+        document.write(" n and m convert to integer and float then added = "+ ( n + m ) + "</br>");
+        w = m + n + 100;
+        document.write("w = m + n + 100 = " + w + "</br>");
+        w = String(w);
+        document.write("w new data type = " + typeof(w) + "</br>");
+        str1 = "500";
+        document.write(" String to Value = " + Number(str1) + "</br>");
+        document.write("k = 20 convert to binary = " + k.toString(2) + "</br>");
+        document.write("k = 20 convert to octal = " + k.toString(8) + "</br>");
+        document.write("k = 20 convert to hexadecimal = " + k.toString(16) + "</br>");
+    </script>
+    
+</body>
+</html>
