@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "compay information",
+    "properties": {
+        "StockID":{
+            "type":"string"
+        },
+        "StockName":{
+            "type":"string" 
+        },
+        "Listed":{
+            "type":"boolean"
+        },
+        "Marketvalue":{
+            "type":"number"
+        },
+        "TEL":{
+            "type":"string"
+        }
+    },
+    "required":[
+        "StockID"
+        "Marketvalue"
+        "TEL"
+    ]
+
+
+
+}
