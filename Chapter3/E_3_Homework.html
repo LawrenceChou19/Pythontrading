@@ -58,7 +58,7 @@
     <script>
         var jsonString = '{"name": "Tom", "age": 18, "city": "New York", "phone": "0912345678"}';
         var obj = JSON.parse(jsonString);
-        // 將 JSON 物件的內容插入到 HTML 中
+        // add the json object to HTML
         var jsonDisplayDiv = document.getElementById('jsonDisplay');
         for (var key in obj) {
         if (obj.hasOwnProperty(key)) {

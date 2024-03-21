@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_4_2</title>
+</head>
+<body>
+    <p>C/F Converter</p>
+    <fieldset><legend>Temperature convert : </legend>
+        <input type="radio" name="temp" value="1" id="Cel_Radio" checked>Celsius
+        <input type="text" id="Celsius" name="Celsius"><br>
+        <input type="radio" name="temp" value="2" id="Fah_Radio">Fahrenheit
+        <input type="text" id="Fahrenheit" name="Fahrenheit"><br>
+        </fieldset>
+        <br><button type="button" onclick="TempTrans()">Calculator!</button>
+        <p>After Change : <span id="result"></span></p>
+</body>
+<script>   
+    function TempTrans(){
+        var c = document.getElementById("Celsius").value;
+        var f = document.getElementById("Fahrenheit").value;
+        if (document.getElementById("Cel_Radio").checked){
+            Ftemp = c * (9/5) + 32;
+            document.getElementById("result").innerHTML = "Fahrenheit " + Ftemp + " degree";
+        }else {
+            Ctemp = (f-32)*(5/9);
+            document.getElementById("result").innerHTML = "Celsius " + Ctemp + " degree";
+        }
+    }
+</script>
+</html>

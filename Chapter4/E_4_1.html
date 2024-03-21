@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_4_1</title>
+</head>
+
+<body>
+    <h2>Car driving conditions.</h2>
+    <input type="text" id="age" placeholder="input the age">
+    <input type="button" value="See Result" onclick="detectedage()">
+    <div id = "result">
+</body>
+
+<script>
+    //example
+    var age = 20;
+    if (age > 18){
+        document.write("Meet driving conditions.")
+    }
+    else{
+        document.write("Violation of driving conditions.")
+    }
+    // add a function
+    function detectedage(){
+        var age = parseFloat(document.getElementById("age").value);
+        if(isNaN(age)){
+            document.getElementById('result').innerHTML = "Input the number";
+            return;
+        } else if (age > 18) {
+        document.getElementById('result').innerHTML = "Meet driving conditions.";
+        }
+        else {
+        document.getElementById('result').innerHTML = "Violation of driving conditions.";
+        }   
+    }
+</script>
