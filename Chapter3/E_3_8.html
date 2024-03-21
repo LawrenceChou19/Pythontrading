@@ -22,6 +22,18 @@
         document.write("s &=t = "+(s&=t)+"</br>");
         document.write("s |=t = "+(s|=t)+"</br>");
         document.write("s ^=t = "+(s^=t)+"</br>");
+
+        var jsonString = '{"name": "John", "age": 30, "city": "New York"}';
+
+// 將 JSON 字串解析為 JavaScript 物件
+var obj = JSON.parse(jsonString);
+
+// 獲取 JavaScript 物件的屬性
+console.log(obj.name); // 輸出: John
+console.log(obj.age);  // 輸出: 30
+console.log(obj.city); // 輸出: New York
+
     </script>
+
 </body>
 </html>
