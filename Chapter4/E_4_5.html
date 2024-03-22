@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_4_5</title>
+    <script>
+    function UnitsCompute(){
+
+        var items = document.getElementById("sel").selectedIndex;
+        var amount = parseInt(document.getElementById("amt").value);
+        switch(items){
+            case 0 :
+                Units = amount/31.71;
+                break;
+            case 1 :
+                Units = amount/9.02;
+                break;
+            case 2 :
+                Units = amount/15.09;
+                break;
+            }
+    document.getElementById("result").innerHTML = (Units.toFixed(4)+" point ");
+        }
+    </script>
+</head>
+<body>
+    Found Choice:
+    <select id ="sel" onchange="UnitsCompute()">
+    <option>BlackRock World Gold Fund</option>
+    <option>Allianz Income Growth Fund</option>
+    <option>AllianceBernstein - China Opportunity Fund</option>
+    </select><br>
+    Buying amount = <input type = "text" id = "amt" name ="amount" value = "10000">
+    <br>換算單位數 = <div id= "result" style = "display:inline;"></div>
+</body>
+</html>
