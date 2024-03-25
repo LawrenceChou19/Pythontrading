@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E_4_8</title>
-    //Calculate the area of ​​the integral 
+    <title>E_4_7</title>
 </head>
 <body>
-    
+    <H3>Calculate the area of ​​the integral</H3>
+    <script>
+        var dx = 0.00001; var area = 0; var y= 0;var x; var total = 0;
+        for(x=2;x<=5;x+=dx){
+            //x is 2+0.00001, basically plus 0.00001 each time
+            document.write("The x is = "+ x +"<br>");
+            y=(Math.pow(x,2))+1; //Math.pow(base, exponent)
+            //y is (2.00001*2.00001) +1 = 5.0000400001
+            //document.write("The y is = "+ y +"<br>");
+            area=area + (y*dx);
+            //document.write("The area is = "+ area +"<br>");
+            //area is 0 + (5.0000400001 * 0.00001)
+            total = total + 1 
+        }
+        document.write("Total number of operations = "+ total +"<br>");
+        document.write("The integral is = "+ area +"<br>");
+    </script>
 </body>
 </html>
