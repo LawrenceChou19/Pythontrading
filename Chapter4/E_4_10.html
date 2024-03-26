@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_4_10</title>
+</head>
+<body>
+    <H3>Repeatedly generates random numbers (integers from 0 to 6) and ends at 0</H3>
+    <script>
+        var x;
+        x =Math.floor(Math.random()*7);
+        count=1;
+        while(x!=0){
+            document.write(x+"<br>");
+            x = Math.floor(Math.random()*7);
+            count=count+1;
+        }
+        document.write(x+"<br>");
+        document.write("Random numbers were generated a total of " + count+" times ")
+    </script>
+</body>
+</html>
