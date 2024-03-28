@@ -22,7 +22,11 @@
                 light = level4 + ', The economy is not doing well ';
             }else if(prosperityindex >=9 && prosperityindex <=16){
                 light = level5 + ', The economy enters recession ';
+            }else{
+                //over the range
+                alert("Please check the number between 9-45")
             }
+            
             document.getElementById("result").innerHTML = light + " !";
         }
     </script>
@@ -31,7 +35,7 @@
     <fieldset>
         <legend>The economy index</legend>
         <label for="Indicators">Prosperity index</label>
-        <input type="text" id="Text_prosperity"name="Indicators"><br>
+        <input type="number" id="Text_prosperity"name="Indicators"min="9" max="45"><br>
     </fieldset>
     <br><button type="button" onclick="indicators()">Check!!</button>
     <p>Prosperity level is <span id = "result"></span></p>
