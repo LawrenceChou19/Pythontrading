@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E_4_HOMEWORK</title>
+    <script>
+        function indicators(){
+            var prosperityindex = document.getElementById("Text_prosperity").value;
+            var level1 = 'Red light'
+            var level2 = 'Yellow-Red light'
+            var level3 = 'Green light'
+            var level4 = 'Yello-Blue light'
+            var level5 = 'Blue light'
+            if(prosperityindex >=38 && prosperityindex <=45){
+                light = level1 + ', The economy is overheating ';
+            }else if(prosperityindex >=32 && prosperityindex <=37){
+                light = level2 + ', The conomic prosperity is strong ';
+            }else if(prosperityindex >=23 && prosperityindex <=31){
+                light = level3 + ', The economy is stable ';
+            }else if(prosperityindex >=17 && prosperityindex <=22){
+                light = level4 + ', The economy is not doing well ';
+            }else if(prosperityindex >=9 && prosperityindex <=16){
+                light = level5 + ', The economy enters recession ';
+            }
+            document.getElementById("result").innerHTML = light + " !";
+        }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>The economy index</legend>
+        <label for="Indicators">Prosperity index</label>
+        <input type="text" id="Text_prosperity"name="Indicators"><br>
+    </fieldset>
+    <br><button type="button" onclick="indicators()">Check!!</button>
+    <p>Prosperity level is <span id = "result"></span></p>
+</body>
+</html>
